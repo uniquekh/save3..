@@ -154,7 +154,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			bot.send_message(message.chat.id, msg.text, entities=msg.entities, reply_to_message_id=message.id)
 			return
 
-		smsg = bot.send_message(message.chat.id, '__Downloading__', reply_to_message_id=message.id)
+		smsg = bot.send_message(message.chat.id, '__ruko zara sabar kro__', reply_to_message_id=message.id)
 		dosta = threading.Thread(target=lambda:downstatus(f'{message.id}downstatus.txt',smsg),daemon=True)
 		dosta.start()
 		file = acc.download_media(msg, progress=progress, progress_args=[message,"down"])
